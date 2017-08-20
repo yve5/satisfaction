@@ -4,21 +4,71 @@
     <meta Charset="utf-8">
     <meta Name="viewport" Content="width=device-width">
 
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <title>Knockout</title>
+    <title>Satisfaction</title>
 </head>
 <body>
 
-    <p>First name: <strong data-bind="text: firstName"></strong></p>
-    <p>Last name: <strong data-bind="text: lastName"></strong></p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4">Satisfaction <span data-bind="text: result"></span></h1>
 
-    <p>First name: <input data-bind="value: firstName" /></p>
-    <p>Last name: <input data-bind="value: lastName" /></p>
+                <form data-bind="foreach: questions">
+                    <div class="form-group row">
+                        <label class="col-sm-8 col-form-label" data-bind="text: label"></label>
 
-    <p>Full name: <strong data-bind="text: fullName"></strong></p>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" data-bind="value: answer">
+                        </div>
+                    </div>
+                </form>
 
-    <button data-bind="click: capitalizeLastName">Go caps</button>
+                <!--
+                <table class="table">
+                    <tbody data-bind="foreach: questions">
+                        <tr>
+                            <td data-bind="text: label"></td>
+                            <td>
+                                <select data-bind="options: [1,2,3,4,5], value: points"></select>
 
+                                <input type="integer" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                -->
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success" role="alert">
+                    Entre 61 et 75 %, vous êtes sur la bonne voie. Au-dessus de 75 %, Brett Nelson  considère que vous avez trouvé un job qui vous correspond et au-dessus de 90 %, c’est le job parfait.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-warning" role="alert">
+                    Un CF inférieur à 60 % signifie que vous devriez y songer deux fois avant d’accepter le job – ou le quitter sur-le-champ.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-danger" role="alert">
+                    Plus votre CF est élevé, plus vous pouvez en déduire que le job vous convient.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
 </body>
