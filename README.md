@@ -1,5 +1,4 @@
-# Knockout Gulp
-
+# Job Satisfaction
 
 ## Installation
 
@@ -48,4 +47,4 @@ Type the command line **gulp** in terminal.
 
 ## License
 
-Sanbox CSS is released under the [MIT License](http://opensource.org/licenses/MIT).
+Job Satisfaction is released under the [MIT License](http://opensource.org/licenses/MIT).
