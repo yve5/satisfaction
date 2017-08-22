@@ -21,6 +21,8 @@
 
                         <div class="col-sm-4">
                             <input type="number" class="form-control" data-bind="value: answer">
+
+                            <select class="form-control" data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select>
                         </div>
                     </div>
                 </form>

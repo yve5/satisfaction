@@ -26,14 +26,22 @@ function Question(label) {
 
 	self.label = label;
 	self.answer = ko.observable(50);
+	
+	self.meal = ko.observable();
 }
 
 function SurveyViewModel() {
 	var self = this;
 
+	self.availableMeals = [
+        { mealName: "Standard (sandwich)", price: 0 },
+        { mealName: "Premium (lobster)", price: 34.95 },
+        { mealName: "Ultimate (whole zebra)", price: 290 }
+    ]; 
+
 	self.questions = ko.observableArray([
-		new Question("Le salaire (est-ce que le job paye bien ?)"),
-		new Question("La satisfaction à faire le job (aimez-vous réellement faire ce en quoi consiste le poste ?)"),
+		new Question('Le salaire (est-ce que le job paye bien ?)'),
+		new Question('La satisfaction à faire le job (aimez-vous réellement faire ce en quoi consiste le poste ?)'),
 		new Question('L’employabilité qui en découle (exercer ce boulot vous rapproche-t-il de vos objectifs pros ?)'),
 		new Question('La possibilité d’avoir du temps pour soi (avez-vous du temps pour vos projets persos ?)'),
 		new Question('La culture de l’entreprise (vos collègues sont-ils d’accord avec vous ?)'),
