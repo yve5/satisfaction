@@ -3,75 +3,62 @@
 <head>
     <meta Charset="utf-8">
     <meta Name="viewport" Content="width=device-width">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"/>
+ 
     <title>Satisfaction</title>
 </head>
 <body>
-
+ 
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="display-4">Satisfaction <span data-bind="text: result"></span></h1>
-
+        <div class="row justify-content-md-center">
+            <div class="col-lg-8">
+                <h1 class="display-4">Satisfaction</h1>
+                <blockquote class="blockquote">
+                    <footer class="blockquote-footer">Calcul du Confidence Factor · Source : Brett Nelson</footer>
+                </blockquote>
+ 
                 <form data-bind="foreach: questions">
                     <div class="form-group row">
-                        <label class="col-sm-8 col-form-label" data-bind="text: label"></label>
-
-                        <div class="col-sm-4">
-                            <input type="number" class="form-control" data-bind="value: answer">
-
-                            <select class="form-control" data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select>
+                        <label class="col-md-10 col-form-label" data-bind="text: label"></label>
+ 
+                        <div class="col-md-2">
+                            <select class="form-control" data-bind="options: availableAnswers, optionsText: GenerateOptionText, value: answer"></select>
                         </div>
                     </div>
                 </form>
-
-                <!--
-                <table class="table">
-                    <tbody data-bind="foreach: questions">
-                        <tr>
-                            <td data-bind="text: label"></td>
-                            <td>
-                                <select data-bind="options: [1,2,3,4,5], value: points"></select>
-
-                                <input type="integer" class="form-control">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                -->
-
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="alert alert-success" role="alert">
-                    Entre 61 et 75 %, vous êtes sur la bonne voie. Au-dessus de 75 %, Brett Nelson  considère que vous avez trouvé un job qui vous correspond et au-dessus de 90 %, c’est le job parfait.
+ 
+        <div class="row justify-content-md-center align-items-center">
+            <div class="col-lg-3">
+                <div class="alert alert-light" role="alert">
+                    Confidence Factor : <span data-bind="text: result"></span>%
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="alert alert-warning" role="alert">
-                    Un CF inférieur à 60 % signifie que vous devriez y songer deux fois avant d’accepter le job – ou le quitter sur-le-champ.
+ 
+            <div class="col-lg-5">
+                <div class="alert alert-success" data-bind="visible: showSuccess()" role="alert">
+                    Vous avez le job parfait !
                 </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="alert alert-danger" role="alert">
-                    Plus votre CF est élevé, plus vous pouvez en déduire que le job vous convient.
+ 
+                <div class="alert alert-info" data-bind="visible: showInfo()" role="alert">
+                    Le job vous correspond.
+                </div>
+ 
+                <div class="alert alert-warning" data-bind="visible: showWarning()" role="alert">
+                    Vous êtes sur la bonne voie pour trouver le job parfait.
+                </div>
+ 
+                <div class="alert alert-danger" data-bind="visible: showDanger()" role="alert">
+                    Songez à deux fois avant d’accepter le job, ou le quitter sur-le-champ.
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-    <script src="js/knockout.js"></script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

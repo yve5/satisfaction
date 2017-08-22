@@ -1,74 +1,68 @@
-// function AppViewModel() {
-//     this.firstName = ko.observable("John");
-//     this.lastName = ko.observable("Bertington");
-
-//     this.fullName = ko.computed(function() {
-//         return this.firstName() + " " + this.lastName();
-//     }, this);
-
-//     this.capitalizeLastName = function() {
-//         var currentVal = this.lastName();
-//         this.lastName(currentVal.toUpperCase());
-//     };
-// }
-
-// var avm = new AppViewModel();
-// ko.applyBindings(avm);
-
-
-// function Answer(text) {
-// 	this.answerText = text;
-// 	this.points = ko.observable(1);
-// }
-
-function Question(label) {
-	var self = this;
-
-	self.label = label;
-	self.answer = ko.observable(50);
-	
-	self.meal = ko.observable();
+var GenerateOptionText = function(value) {
+    return value + '%';
 }
-
-function SurveyViewModel() {
-	var self = this;
-
-	self.availableMeals = [
-        { mealName: "Standard (sandwich)", price: 0 },
-        { mealName: "Premium (lobster)", price: 34.95 },
-        { mealName: "Ultimate (whole zebra)", price: 290 }
-    ]; 
-
-	self.questions = ko.observableArray([
-		new Question('Le salaire (est-ce que le job paye bien ?)'),
-		new Question('La satisfaction à faire le job (aimez-vous réellement faire ce en quoi consiste le poste ?)'),
-		new Question('L’employabilité qui en découle (exercer ce boulot vous rapproche-t-il de vos objectifs pros ?)'),
-		new Question('La possibilité d’avoir du temps pour soi (avez-vous du temps pour vos projets persos ?)'),
-		new Question('La culture de l’entreprise (vos collègues sont-ils d’accord avec vous ?)'),
-		new Question('La santé de l’organisation'),
-		new Question('Le lieu de travail'),
-		new Question('La qualité du travail d’équipe'),
-		new Question('Les perspectives d’évolution professionnelles'),
-		new Question('L’interaction avec des personnes en ou hors de l’entreprise (vous satisfont-elles ?)')
-	]);
-
-
-    // this.question = question;
-    // this.pointsBudget = pointsBudget;
-    // this.answers = $.map(answers, function(text) { return new Answer(text) });
-    // // this.answers = null;
-    // this.save = function() { alert('To do') };
-                   
+ 
+var Question = function (label, importance) {
+    var self = this;
+    var randomValue;
+ 
+    self.label = label;
+    self.importance = importance;
+ 
+    self.availableAnswers = ko.observableArray();
+    for (var i = 0; i <= 100; i += 5) {
+        self.availableAnswers.push(i);
+    }
+ 
+    randomValue = Math.floor(Math.random() * self.availableAnswers().length);
+    self.answer = ko.observable(self.availableAnswers()[randomValue]);
+}
+ 
+var SurveyViewModel = function () {
+    var self = this;
+ 
+    self.questions = ko.observableArray([
+        new Question('Votre salaire vous convient-il ?', 0.2),
+        new Question('Aimez-vous réellement faire les tâches de votre poste ?', 0.2),
+        new Question('Exercer ce travail vous rapproche-t-il de vos objectifs professionnels ?', 0.2),
+        new Question('Avez-vous du temps pour vos projets personnels ?', 0.2),
+        new Question('Vos collègues sont-ils d’accord avec vous ?', 0.2),
+        new Question('Votre société se porte-t-elle bien ?', 0.2),
+        new Question('Aimez-vous votre lieu de travail ?', 0.2),
+        new Question('Appréciez-vous la qualité du travail d’équipe ?', 0.2),
+        new Question('Vos perspectives d’évolution professionnelles vous convient-elles', 0.2),
+        new Question('L’intéraction avec les personnes en ou hors de l’entreprise vous satisfait-elle ?', 0.2)
+    ]);
+ 
     self.result = ko.computed(function() {
         var total = 0;
-
+        var average = 0;
+ 
         for (var i = 0; i < self.questions().length; i++) {
-            total += Number(self.questions()[i].answer());
+            total += Number(self.questions()[i].answer()) + self.questions()[i].importance;
         }
-
-        return total;
+ 
+        average = Math.floor(total / self.questions().length);
+ 
+        return average;
     });
+ 
+    self.showSuccess = function() {
+        return self.result() > 90;
+    }
+ 
+    self.showInfo = function() {
+        return self.result() > 75 && self.result() <= 90;
+    }
+ 
+    self.showWarning = function() {
+        return self.result() > 60 && self.result() <= 75;
+    }
+ 
+    self.showDanger = function() {
+        return self.result() <= 60;
+    }
 }
-
+ 
 var svm = new SurveyViewModel();
 ko.applyBindings(svm);
