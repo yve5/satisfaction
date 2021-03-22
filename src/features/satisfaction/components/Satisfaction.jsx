@@ -1,67 +1,55 @@
+import React from 'react';
+import { connect } from 'react-redux';
+
 import Question from '../nested/Question';
-import { QUESTIONS } from '../resources/constants';
+import { getFactor, getMessage } from '../resources/Utilities';
+import { SATISFACTION_QUESTIONS } from '../resources/constants';
+
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-const Satisfaction = () => (
-  <div className="container mt-5">
-    <div className="row justify-content-md-center">
-      <div className="col-lg-8">
-        <h1 className="display-4">Satisfaction</h1>
-        <blockquote className="blockquote">
-          <footer className="blockquote-footer">
-            Calcul du Confidence Factor · Source : Brett Nelson
-          </footer>
-        </blockquote>
+const Satisfaction = ({
+  root: {
+    satisfaction: { data },
+  },
+}) => {
+  const factor = getFactor(data);
+  const { className, message } = getMessage(factor);
 
-        {QUESTIONS.map(({ label, importance }, index) => (
-          <Question key={index} label={label} importance={importance} />
-        ))}
-      </div>
-    </div>
+  return (
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col">
+          <h1>Calcul du facteur de confiance</h1>
 
-    <div className="row justify-content-md-center align-items-center">
-      <div className="col-lg-3">
-        <div className="alert alert-light" role="alert">
-          Confidence Factor : <span data-bind="text: result"></span>%
+          <blockquote className="blockquote">
+            <footer className="blockquote-footer">Source : Brett Nelson</footer>
+          </blockquote>
+
+          {SATISFACTION_QUESTIONS.map(({ id, label, importance }) => (
+            <Question id={id} importance={importance} key={id} label={label} />
+          ))}
         </div>
       </div>
 
-      <div className="col-lg-5">
-        <div
-          className="alert alert-success"
-          data-bind="visible: showSuccess()"
-          role="alert"
-        >
-          Vous avez le job parfait !
+      <div className="row">
+        <div className="col-md-7">
+          <div className={`alert ${className}`} role="alert">
+            {message}
+          </div>
         </div>
 
-        <div
-          className="alert alert-info"
-          data-bind="visible: showInfo()"
-          role="alert"
-        >
-          Le job vous correspond.
-        </div>
-
-        <div
-          className="alert alert-warning"
-          data-bind="visible: showWarning()"
-          role="alert"
-        >
-          Vous êtes sur la bonne voie pour trouver le job parfait.
-        </div>
-
-        <div
-          className="alert alert-danger"
-          data-bind="visible: showDanger()"
-          role="alert"
-        >
-          Songez à deux fois avant d’accepter le job, ou le quitter
-          sur-le-champ.
+        <div className="col-md-4 offset-md-1">
+          <div className="alert alert-dark" role="alert">
+            Confidence Factor : {factor}%
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-export default Satisfaction;
+const mapStateToProps = (state) => ({
+  root: state,
+});
+
+export default connect(mapStateToProps)(Satisfaction);
