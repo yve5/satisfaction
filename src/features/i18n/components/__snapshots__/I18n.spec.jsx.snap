@@ -65,4 +65,4 @@ exports[`I18n should match expected snapshot with title attribute shortcut 1`] =
 />
 `;
 
-exports[`I18n should match expected snapshot without props 1`] = `""`;
+exports[`I18n should match expected snapshot without props 1`] = `"-"`;
