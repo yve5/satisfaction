@@ -1,12 +1,6 @@
 import * as tools from './All';
 
 describe('Actions', () => {
-  it('should handle SATISFACTION_CHANGE_VALUE. undefined', () => {
-    expect(tools.changeValue(undefined, undefined)).toEqual({
-      type: 'SATISFACTION_CHANGE_VALUE',
-    });
-  });
-
   it('should handle SATISFACTION_CHANGE_VALUE. number', () => {
     expect(tools.changeValue('culture', 42.5)).toEqual({
       type: 'SATISFACTION_CHANGE_VALUE',

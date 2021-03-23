@@ -5,55 +5,53 @@ export const SATISFACTION_RANGE_STEP = 1;
 export const SATISFACTION_QUESTIONS = [
   {
     id: 'salary',
-    label: 'Votre salaire vous convient-il ?',
+    label: 'Are you happy with your salary?',
     importance: 0.2,
   },
   {
     id: 'satisfaction',
-    label: 'Aimez-vous réellement faire les tâches de votre poste ?',
+    label: 'Do you actually enjoy doing the tasks of your job?',
     importance: 0.15,
   },
   {
     id: 'employability',
-    label:
-      'Exercer ce travail vous rapproche-t-il de vos objectifs professionnels ?',
+    label: 'Does doing this work bring you closer to your career goals?',
     importance: 0.15,
   },
   {
     id: 'sideproject',
-    label: 'Avez-vous du temps pour vos projets personnels ?',
+    label: 'Do you have time for your personal projects?',
     importance: 0.1,
   },
   {
     id: 'culture',
-    label: 'Vos collègues sont-ils d’accord avec vous ?',
+    label: 'Do your colleagues agree with you?',
     importance: 0.1,
   },
   {
     id: 'health',
-    label: 'Votre société se porte-t-elle bien ?',
+    label: 'Is your company doing well?',
     importance: 0.1,
   },
   {
     id: 'location',
-    label: 'Aimez-vous votre lieu de travail ?',
+    label: 'Do you like your workplace?',
     importance: 0.05,
   },
   {
     id: 'teamwork',
-    label: 'Appréciez-vous la qualité du travail d’équipe ?',
+    label: 'Do you appreciate the quality of the teamwork?',
     importance: 0.05,
   },
   {
-    id: 'outlook',
-    label:
-      'Vos perspectives d’évolution professionnelles vous convient-elles ?',
+    id: 'prospect',
+    label: 'Do your career prospects suit you?',
     importance: 0.05,
   },
   {
     id: 'interaction',
     label:
-      'L’intéraction avec les personnes en ou hors de l’entreprise vous satisfait-elle ?',
+      'Are you satisfied with the interaction with people inside or outside the company?',
     importance: 0.05,
   },
 ];
@@ -61,19 +59,18 @@ export const SATISFACTION_QUESTIONS = [
 export const SATISFACTION_MESSAGES = [
   {
     className: 'alert-danger',
-    message:
-      'Songez à deux fois avant d’accepter le job, ou le quitter sur-le-champ.',
+    message: 'Think twice about taking the job, or leaving it right away.',
   },
   {
     className: 'alert-warning',
-    message: 'Vous êtes sur la bonne voie pour trouver le job parfait.',
+    message: "You're on the right track to finding the perfect job.",
   },
   {
     className: 'alert-primary',
-    message: 'Le job vous correspond.',
+    message: 'The job is for you.',
   },
   {
     className: 'alert-success',
-    message: 'Vous avez le job parfait !',
+    message: 'You got the perfect job!',
   },
 ];

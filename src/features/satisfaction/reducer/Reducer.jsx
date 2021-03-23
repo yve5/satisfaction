@@ -4,7 +4,7 @@ import {
 } from '../resources/constants';
 
 const data = {};
-SATISFACTION_QUESTIONS.forEach(({ id }) => (data[id] = '50'));
+SATISFACTION_QUESTIONS.forEach(({ id }) => (data[id] = 0));
 
 const initialState = {
   data,

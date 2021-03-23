@@ -12,7 +12,7 @@ describe('getFactor', () => {
         health: 0.05,
         location: 0.025,
         teamwork: 0.025,
-        outlook: 0.025,
+        prospect: 0.025,
         interaction: 0.025,
       })
     ).toEqual(50);
@@ -27,7 +27,7 @@ describe('getFactor', () => {
         health: 0.05,
         location: 0.025,
         teamwork: 0.025,
-        outlook: 0.025,
+        prospect: 0.025,
       })
     ).toEqual(35);
   });
@@ -37,29 +37,28 @@ describe('getMessage', () => {
   it('should handle danger alert', () => {
     expect(tools.getMessage(37)).toEqual({
       className: 'alert-danger',
-      message:
-        'Songez à deux fois avant d’accepter le job, ou le quitter sur-le-champ.',
+      message: 'Think twice about taking the job, or leaving it right away.',
     });
   });
 
   it('should handle warning alert', () => {
     expect(tools.getMessage(66)).toEqual({
       className: 'alert-warning',
-      message: 'Vous êtes sur la bonne voie pour trouver le job parfait.',
+      message: "You're on the right track to finding the perfect job.",
     });
   });
 
   it('should handle primary alert', () => {
     expect(tools.getMessage(88)).toEqual({
       className: 'alert-primary',
-      message: 'Le job vous correspond.',
+      message: 'The job is for you.',
     });
   });
 
   it('should handle success alert', () => {
     expect(tools.getMessage(95)).toEqual({
       className: 'alert-success',
-      message: 'Vous avez le job parfait !',
+      message: 'You got the perfect job!',
     });
   });
 });

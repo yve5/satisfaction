@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Satisfaction should match expected snapshot. default 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row mt-3"
+  >
+    <div
+      className="col text-right"
+    >
+      <button
+        className="btn btn-light"
+        onClick={[Function]}
+        type="button"
+      >
+        Français
+      </button>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h1>
+        Calcul du facteur de confiance
+      </h1>
+      <blockquote
+        className="blockquote"
+      >
+        <footer
+          className="blockquote-footer"
+        >
+          Source : Brett Nelson
+        </footer>
+      </blockquote>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-salary"
+        >
+          Votre salaire vous convient-il ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-salary"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-satisfaction"
+        >
+          Aimez-vous réellement faire les tâches de votre poste ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-satisfaction"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-employability"
+        >
+          Exercer ce travail vous rapproche-t-il de vos objectifs professionnels ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-employability"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-sideproject"
+        >
+          Avez-vous du temps pour vos projets personnels ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-sideproject"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-culture"
+        >
+          Vos collègues sont-ils d’accord avec vous ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-culture"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-health"
+        >
+          Votre société se porte-t-elle bien ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-health"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-location"
+        >
+          Aimez-vous votre lieu de travail ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-location"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-teamwork"
+        >
+          Appréciez-vous la qualité du travail d’équipe ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-teamwork"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-prospect"
+        >
+          Vos perspectives d’évolution professionnelles vous convient-elles ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-prospect"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-interaction"
+        >
+          L’intéraction avec les personnes en ou hors de l’entreprise vous satisfait-elle ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-interaction"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-7"
+    >
+      <div
+        className="alert alert-danger"
+        role="alert"
+      >
+        Songez à deux fois avant d’accepter le job, ou le quitter sur-le-champ.
+      </div>
+    </div>
+    <div
+      className="col-md-4 offset-md-1"
+    >
+      <div
+        className="alert alert-dark"
+        role="alert"
+      >
+        Facteur de confiance
+         : 
+        0
+        %
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Satisfaction should match expected snapshot. en 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row mt-3"
+  >
+    <div
+      className="col text-right"
+    >
+      <button
+        className="btn btn-light"
+        onClick={[Function]}
+        type="button"
+      >
+        Français
+      </button>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h1>
+        Calcul du facteur de confiance
+      </h1>
+      <blockquote
+        className="blockquote"
+      >
+        <footer
+          className="blockquote-footer"
+        >
+          Source : Brett Nelson
+        </footer>
+      </blockquote>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-salary"
+        >
+          Votre salaire vous convient-il ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-salary"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-satisfaction"
+        >
+          Aimez-vous réellement faire les tâches de votre poste ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-satisfaction"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-employability"
+        >
+          Exercer ce travail vous rapproche-t-il de vos objectifs professionnels ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-employability"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-sideproject"
+        >
+          Avez-vous du temps pour vos projets personnels ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-sideproject"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-culture"
+        >
+          Vos collègues sont-ils d’accord avec vous ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-culture"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-health"
+        >
+          Votre société se porte-t-elle bien ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-health"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-location"
+        >
+          Aimez-vous votre lieu de travail ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-location"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-teamwork"
+        >
+          Appréciez-vous la qualité du travail d’équipe ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-teamwork"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-prospect"
+        >
+          Vos perspectives d’évolution professionnelles vous convient-elles ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-prospect"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+      <div
+        className="row mb-5 mb-md-3"
+      >
+        <label
+          className="col-9 col-md-7 form-label"
+          htmlFor="question-interaction"
+        >
+          L’intéraction avec les personnes en ou hors de l’entreprise vous satisfait-elle ?
+        </label>
+        <div
+          className="col-3 col-md-1 text-right"
+        >
+          0
+          %
+        </div>
+        <div
+          className="col-md-4"
+        >
+          <input
+            className="form-range px-0 w-100"
+            id="question-interaction"
+            onChange={[Function]}
+            step={1}
+            type="range"
+            value={0}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-7"
+    >
+      <div
+        className="alert alert-danger"
+        role="alert"
+      >
+        Songez à deux fois avant d’accepter le job, ou le quitter sur-le-champ.
+      </div>
+    </div>
+    <div
+      className="col-md-4 offset-md-1"
+    >
+      <div
+        className="alert alert-dark"
+        role="alert"
+      >
+        Facteur de confiance
+         : 
+        0
+        %
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -35,8 +35,7 @@ describe('I18n', () => {
         <I18n />
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with a string to translate', () => {
@@ -45,8 +44,7 @@ describe('I18n', () => {
         <I18n>Pending mode</I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with an option tag to translate', () => {
@@ -57,8 +55,7 @@ describe('I18n', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should handle an error with 2 chilren', () => {
@@ -109,8 +106,7 @@ describe('I18n', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with title attribute shortcut', () => {
@@ -121,8 +117,7 @@ describe('I18n', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with an option tag to translate and args', () => {
@@ -135,8 +130,7 @@ describe('I18n', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
 
@@ -149,8 +143,7 @@ describe('I18n date parser', () => {
         <I18n date={dateExample} />
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with undefined date', () => {
@@ -159,8 +152,7 @@ describe('I18n date parser', () => {
         <I18n date={undefined} />
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with date and format', () => {
@@ -169,8 +161,7 @@ describe('I18n date parser', () => {
         <I18n date={dateExample} format="PPp" />
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with string, date and format', () => {
@@ -179,8 +170,7 @@ describe('I18n date parser', () => {
         <I18n date={dateExample}>Pending mode</I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with string, date and format', () => {
@@ -189,8 +179,7 @@ describe('I18n date parser', () => {
         <I18n date={dateExample}>Pending mode</I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   const startExample = new Date(2017, 4, 14, 17, 51, 31);
@@ -210,8 +199,7 @@ describe('I18n date parser', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with date args', () => {
@@ -228,8 +216,7 @@ describe('I18n date parser', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with attributes and date args', () => {
@@ -251,8 +238,7 @@ describe('I18n date parser', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 
   it('should match expected snapshot with input tag', () => {
@@ -271,7 +257,6 @@ describe('I18n date parser', () => {
         </I18n>
       </Provider>
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
