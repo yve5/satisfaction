@@ -15,7 +15,10 @@ export const formatDate = (value, pattern = 'P', lang = 'en') => {
 
     if (stringDate instanceof Date && !isNaN(stringDate)) {
       if (pattern === 'fromNow') {
-        return formatDistance(stringDate, new Date(), { addSuffix: true, locale });
+        return formatDistance(stringDate, new Date(), {
+          addSuffix: true,
+          locale,
+        });
       }
       return format(stringDate, pattern, { locale });
     }
@@ -52,7 +55,11 @@ export const tsl = (dictionary, text, args = {}) => {
       Object.keys(args).forEach((key) => {
         const property = args[key];
 
-        if (typeof property === 'object' && property !== null && 'date' in property) {
+        if (
+          typeof property === 'object' &&
+          property !== null &&
+          'date' in property
+        ) {
           const { date, format, lang } = property;
           result = result.split(key).join(formatDate(date, format, lang));
         } else {
@@ -103,7 +110,24 @@ export const checkMissingTerms = (primary, secondary) => {
 export const checkTermOrder = (collection) => {
   const ordered = [];
   Object.keys(collection)
-    .sort()
+    .sort((one, two) => {
+      const lowerOne = one.toLowerCase();
+      const lowerTwo = two.toLowerCase();
+
+      if (lowerOne < lowerTwo) {
+        return -1;
+      }
+
+      if (lowerOne > lowerTwo) {
+        return 1;
+      }
+
+      if (one < two) {
+        return -1;
+      }
+
+      return 1;
+    })
     .map((key) => ordered.push(key));
   return ordered;
 };

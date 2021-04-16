@@ -25,17 +25,24 @@ describe('Satisfaction', () => {
         <Satisfaction />
       </Provider>
     );
-
-    act(() => {
-      component.root
-        .findByProps({ className: 'btn btn-light' })
-        .props.onClick();
-    });
-
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('should match expected snapshot. en', () => {
+  it('should match expected snapshot. change lang', () => {
+    const component = create(
+      <Provider store={mockStore({ i18n, satisfaction })}>
+        <Satisfaction />
+      </Provider>
+    );
+    act(() => {
+      component.root
+        .findByProps({ 'data-testid': 's10n-change-lang' })
+        .props.onClick();
+    });
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('should match expected snapshot. change lang en', () => {
     const component = create(
       <Provider
         store={mockStore({ i18n: { ...i18n, lang: 'en' }, satisfaction })}
@@ -43,13 +50,25 @@ describe('Satisfaction', () => {
         <Satisfaction />
       </Provider>
     );
-
     act(() => {
       component.root
-        .findByProps({ className: 'btn btn-light' })
+        .findByProps({ 'data-testid': 's10n-change-lang' })
         .props.onClick();
     });
+    expect(component.toJSON()).toMatchSnapshot();
+  });
 
+  it('should match expected snapshot. print', () => {
+    const component = create(
+      <Provider store={mockStore({ i18n, satisfaction })}>
+        <Satisfaction />
+      </Provider>
+    );
+    act(() => {
+      component.root
+        .findByProps({ 'data-testid': 's10n-print' })
+        .props.onClick();
+    });
     expect(component.toJSON()).toMatchSnapshot();
   });
 });

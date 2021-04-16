@@ -18,6 +18,10 @@ export const I18N_DICTIONARY = {
   'Does doing this work bring you closer to your career goals?':
     'Exercer ce travail vous rapproche-t-il de vos objectifs professionnels ?',
   'Is your company doing well?': 'Votre société se porte-t-elle bien ?',
+  lang: 'fr',
+  languageId: 'Français',
+  Print: 'Impression',
+  Result: 'Résultat',
   'Source : Brett Nelson': 'Source : Brett Nelson',
   'The job is for you.': 'Le job vous correspond.',
   'Think twice about taking the job, or leaving it right away.':
@@ -25,6 +29,4 @@ export const I18N_DICTIONARY = {
   'You got the perfect job!': 'Vous avez le job parfait !',
   "You're on the right track to finding the perfect job.":
     'Vous êtes sur la bonne voie pour trouver le job parfait.',
-  lang: 'fr',
-  languageId: 'Français',
 };

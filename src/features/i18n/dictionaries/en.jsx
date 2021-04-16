@@ -16,6 +16,10 @@ export const I18N_DICTIONARY = {
   'Does doing this work bring you closer to your career goals?':
     'Does doing this work bring you closer to your career goals?',
   'Is your company doing well?': 'Is your company doing well?',
+  lang: 'en',
+  languageId: 'English',
+  Print: 'Print',
+  Result: 'Result',
   'Source : Brett Nelson': 'Source : Brett Nelson',
   'The job is for you.': 'The job is for you.',
   'Think twice about taking the job, or leaving it right away.':
@@ -23,6 +27,4 @@ export const I18N_DICTIONARY = {
   'You got the perfect job!': 'You got the perfect job!',
   "You're on the right track to finding the perfect job.":
     "You're on the right track to finding the perfect job.",
-  lang: 'en',
-  languageId: 'English',
 };

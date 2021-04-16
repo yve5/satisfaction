@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import I18n from '../../i18n';
 import Question from '../nested/Question';
 
-import { getFactor, getMessage } from '../resources/Utilities';
+import { getFactor, getMessage, print } from '../resources/Utilities';
 import { SATISFACTION_QUESTIONS } from '../resources/constants';
 import { changeLang } from '../../i18n/actions/All';
 
@@ -12,7 +12,7 @@ import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const Satisfaction = ({
   root: {
-    i18n: { lang },
+    i18n: { dictionary, lang },
     satisfaction: { data },
   },
   changeLangProp,
@@ -29,11 +29,21 @@ const Satisfaction = ({
       <div className="row mt-3">
         <div className="col text-right">
           <button
-            className="btn btn-light"
+            className="btn btn-light mr-2"
+            data-testid="s10n-change-lang"
             onClick={() => changeLangProp(lang === 'fr' ? 'en' : 'fr')}
             type="button"
           >
             <I18n>languageId</I18n>
+          </button>
+
+          <button
+            className="btn btn-light"
+            data-testid="s10n-print"
+            onClick={() => print(dictionary, data)}
+            type="button"
+          >
+            <I18n>Print</I18n>
           </button>
         </div>
       </div>

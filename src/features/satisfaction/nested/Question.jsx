@@ -10,7 +10,7 @@ const Question = ({ id, label, changeValueProp }) => {
 
   useEffect(() => {
     changeValueProp(id, answer);
-  }, []);  // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="row mb-5 mb-md-3">
