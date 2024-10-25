@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import I18n from '../../i18n';
 import Question from '../nested/Question';
 
-import { getFactor, getMessage, print } from '../resources/Utilities';
+import * as All from '../../i18n/actions/All';
+
 import { SATISFACTION_QUESTIONS } from '../resources/constants';
-import { changeLang } from '../../i18n/actions/All';
+import { getFactor, getMessage, print } from '../resources/Utilities';
 
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,38 +15,41 @@ const Satisfaction = ({
   root: {
     i18n: { dictionary, lang },
     satisfaction: { data },
+    i18nCopy,
   },
-  changeLangProp,
+  changeLang,
 }) => {
   const factor = getFactor(data);
   const { className, message } = getMessage(factor);
 
   useEffect(() => {
-    changeLangProp();
+    changeLang();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    console.log(i18nCopy?.tsl('Yes'));
+  }, [i18nCopy]);
 
   return (
     <div className="container">
-      <div className="row mt-3">
-        <div className="col text-right">
-          <button
-            className="btn btn-light mr-2"
-            data-testid="s10n-change-lang"
-            onClick={() => changeLangProp(lang === 'fr' ? 'en' : 'fr')}
-            type="button"
-          >
-            <I18n>languageId</I18n>
-          </button>
+      <div className="d-flex justify-content-between my-2">
+        <button
+          type="button"
+          className="btn btn-light mr-2"
+          data-testid="s10n-change-lang"
+          onClick={() => changeLang(lang === 'fr' ? 'en' : 'fr')}
+        >
+          <I18n>languageId</I18n>
+        </button>
 
-          <button
-            className="btn btn-light"
-            data-testid="s10n-print"
-            onClick={() => print(dictionary, data)}
-            type="button"
-          >
-            <I18n>Print</I18n>
-          </button>
-        </div>
+        <button
+          type="button"
+          data-testid="s10n-print"
+          className="btn btn-light"
+          onClick={() => print(dictionary, data)}
+        >
+          <I18n>Print</I18n>
+        </button>
       </div>
 
       <div className="row">
@@ -87,8 +91,8 @@ const mapStateToProps = (state) => ({
   root: state,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  changeLangProp: (lang) => dispatch(changeLang(lang)),
-});
+const mapDispatchToProps = {
+  ...All,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Satisfaction);

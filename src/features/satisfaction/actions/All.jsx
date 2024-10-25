@@ -1,6 +1,6 @@
 import {
-  SATISFACTION_CHANGE_VALUE,
   SATISFACTION_QUESTIONS,
+  SATISFACTION_CHANGE_VALUE,
 } from '../resources/constants';
 
 export const changeValue = (id, value) => {
