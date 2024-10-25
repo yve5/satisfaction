@@ -1,0 +1,2 @@
+export const I18N_CHANGE_LANG = 'I18N_CHANGE_LANG';
+export const LOCAL_USER_LANG = 'LOCAL_USER_LANG';

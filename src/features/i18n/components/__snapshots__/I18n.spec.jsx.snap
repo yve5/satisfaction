@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I18n date parser should match expected snapshot with attributes and date args 1`] = `
+<img
+  alt="Mode décision"
+  src="picture"
+  title="Mise à jour le 14/03/2020, créé le 14/05/2017 par Fitzgerald"
+/>
+`;
+
+exports[`I18n date parser should match expected snapshot with date 1`] = `"14/03/2020"`;
+
+exports[`I18n date parser should match expected snapshot with date and format 1`] = `"14 mars 2020, 13:37"`;
+
+exports[`I18n date parser should match expected snapshot with date args 1`] = `"Mise à jour le 14/03/2020, créé le 14/05/2017 par Fitzgerald"`;
+
+exports[`I18n date parser should match expected snapshot with date args 2`] = `"Mise à jour le 14/03/2020, créé le 14/05/2017 par Fitzgerald"`;
+
+exports[`I18n date parser should match expected snapshot with input tag 1`] = `
+<input
+  className="form-control form-control-sm"
+  disabled={true}
+  type="text"
+  value="14/05/2017"
+/>
+`;
+
+exports[`I18n date parser should match expected snapshot with string, date and format 1`] = `"14/03/2020"`;
+
+exports[`I18n date parser should match expected snapshot with string, date and format 2`] = `"14/03/2020"`;
+
+exports[`I18n date parser should match expected snapshot with undefined date 1`] = `"-"`;
+
+exports[`I18n should match expected snapshot with a string to translate 1`] = `"Mode décision"`;
+
+exports[`I18n should match expected snapshot with an option tag to translate 1`] = `
+<option
+  value="42"
+>
+  Mode décision
+</option>
+`;
+
+exports[`I18n should match expected snapshot with an option tag to translate and args 1`] = `
+<option
+  value="42"
+>
+  Mise à jour le $update, créé le $start par John
+</option>
+`;
+
+exports[`I18n should match expected snapshot with attributes 1`] = `
+<img
+  alt="Mode décision"
+  src="picture"
+  title="Mode décision"
+/>
+`;
+
+exports[`I18n should match expected snapshot with title attribute shortcut 1`] = `
+<img
+  alt="Pending mode"
+  src="picture"
+  title="Mode décision"
+/>
+`;
+
+exports[`I18n should match expected snapshot without props 1`] = `"-"`;
