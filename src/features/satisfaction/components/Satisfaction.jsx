@@ -6,8 +6,8 @@ import Question from '../nested/Question';
 
 import * as All from '../../i18n/actions/All';
 
+import { getFactor, getMessage, print } from '../utils';
 import { SATISFACTION_QUESTIONS } from '../resources/constants';
-import { getFactor, getMessage, print } from '../resources/Utilities';
 
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 

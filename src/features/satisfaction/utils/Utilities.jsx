@@ -1,4 +1,5 @@
 import { jsPDF } from 'jspdf';
+
 import { formatDate, tsl } from '../../i18n/resources/Utilities';
 import {
   SATISFACTION_MESSAGES,
