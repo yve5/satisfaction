@@ -1,9 +1,3 @@
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
 /**
  * @license
   Copyright (c) 2008, Adobe Systems Incorporated
