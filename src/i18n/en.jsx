@@ -1,4 +1,5 @@
-export const I18N_DICTIONARY = {
+const I18N_DICTIONARY = {
+  LANG: 'en',
   'Are you happy with your salary?': 'Are you happy with your salary?',
   'Are you satisfied with the interaction with people inside or outside the company?':
     'Are you satisfied with the interaction with people inside or outside the company?',
@@ -28,3 +29,5 @@ export const I18N_DICTIONARY = {
   "You're on the right track to finding the perfect job.":
     "You're on the right track to finding the perfect job.",
 };
+
+export default I18N_DICTIONARY;

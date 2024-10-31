@@ -1,15 +1,11 @@
-import { createStore, combineReducers } from 'redux';
-import { i18nReducer } from 'organe/i18n';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { thunk } from 'redux-thunk';
 
-import i18n from '../features/i18n/reducer/Reducer';
-import satisfaction from '../features/satisfaction/reducer/Reducer';
+import createRootReducers from './reducers';
 
 const store = createStore(
-  combineReducers({
-    i18nCopy: i18nReducer(),
-    satisfaction,
-    i18n,
-  })
+  createRootReducers(),
+  compose(applyMiddleware(thunk))
 );
 
 export default store;

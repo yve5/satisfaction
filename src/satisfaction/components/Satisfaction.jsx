@@ -1,46 +1,26 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import { I18n, LangSwitch } from 'organe/i18n';
 
-import I18n from '../../i18n';
 import Question from '../nested/Question';
-
-import * as All from '../../i18n/actions/All';
-
+import { getFactor, getMessage, print } from '../utils';
 import { SATISFACTION_QUESTIONS } from '../resources/constants';
-import { getFactor, getMessage, print } from '../resources/Utilities';
 
-import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const Satisfaction = ({
   root: {
-    i18n: { dictionary, lang },
     satisfaction: { data },
-    i18nCopy,
+    i18n: { dictionary },
   },
-  changeLang,
 }) => {
   const factor = getFactor(data);
   const { className, message } = getMessage(factor);
 
-  useEffect(() => {
-    changeLang();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => {
-    console.log(i18nCopy?.tsl('Yes'));
-  }, [i18nCopy]);
-
   return (
     <div className="container">
       <div className="d-flex justify-content-between my-2">
-        <button
-          type="button"
-          className="btn btn-light mr-2"
-          data-testid="s10n-change-lang"
-          onClick={() => changeLang(lang === 'fr' ? 'en' : 'fr')}
-        >
-          <I18n>languageId</I18n>
-        </button>
+        <LangSwitch className="btn btn-light" />
 
         <button
           type="button"
@@ -91,8 +71,4 @@ const mapStateToProps = (state) => ({
   root: state,
 });
 
-const mapDispatchToProps = {
-  ...All,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Satisfaction);
+export default connect(mapStateToProps)(Satisfaction);

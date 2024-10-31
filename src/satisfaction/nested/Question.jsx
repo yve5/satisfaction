@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import { I18n } from 'organe/i18n';
 
-import I18n from '../../i18n';
-import { changeValue } from '../actions/All';
+import * as All from '../actions/All';
 import { SATISFACTION_RANGE_STEP } from '../resources/constants';
 
-const Question = ({ id, label, changeValueProp }) => {
+const Question = ({ id, label, changeValue }) => {
   const [answer, setAnswer] = useState(0);
 
   useEffect(() => {
-    changeValueProp(id, answer);
+    changeValue(id, answer);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -20,15 +20,15 @@ const Question = ({ id, label, changeValueProp }) => {
       <div className="col-3 col-md-1 text-right">{answer}%</div>
       <div className="col-md-4">
         <input
-          className="form-range px-0 w-100"
-          id={`question-${id}`}
-          onChange={({ target: { value } }) => {
-            changeValueProp(id, value);
-            setAnswer(value);
-          }}
-          step={SATISFACTION_RANGE_STEP}
           type="range"
           value={answer}
+          id={`question-${id}`}
+          step={SATISFACTION_RANGE_STEP}
+          className="form-range px-0 w-100"
+          onChange={({ target: { value } }) => {
+            setAnswer(value);
+            changeValue(id, value);
+          }}
         />
       </div>
     </div>
@@ -39,8 +39,8 @@ const mapStateToProps = (state) => ({
   root: state,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  changeValueProp: (id, value) => dispatch(changeValue(id, value)),
-});
+const mapDispatchToProps = {
+  ...All,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Question);

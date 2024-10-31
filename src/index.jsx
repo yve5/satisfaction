@@ -1,21 +1,15 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './features/satisfaction';
+import ReactDOM from 'react-dom/client';
+import { Provider, ReactReduxContext } from 'react-redux';
+
+import store from './config/store';
+import App from './satisfaction';
 import reportWebVitals from './reportWebVitals';
 
-import { Provider, ReactReduxContext } from 'react-redux';
-import store from './config/store';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App context={ReactReduxContext} />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
+    <App context={ReactReduxContext} />
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
