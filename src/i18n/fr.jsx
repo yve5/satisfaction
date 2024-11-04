@@ -19,8 +19,6 @@ const I18N_DICTIONARY = {
   'Does doing this work bring you closer to your career goals?':
     'Exercer ce travail vous rapproche-t-il de vos objectifs professionnels ?',
   'Is your company doing well?': 'Votre société se porte-t-elle bien ?',
-  lang: 'fr',
-  languageId: 'Français',
   Print: 'Impression',
   Result: 'Résultat',
   'Source : Brett Nelson': 'Source : Brett Nelson',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { I18n } from 'organe/i18n';
+import { I18n } from 'organe';
 
 import * as All from '../actions/All';
 import { SATISFACTION_RANGE_STEP } from '../resources/constants';
@@ -24,6 +24,7 @@ const Question = ({ id, label, changeValue }) => {
           value={answer}
           id={`question-${id}`}
           step={SATISFACTION_RANGE_STEP}
+          data-testid="s10n-question-range"
           className="form-range px-0 w-100"
           onChange={({ target: { value } }) => {
             setAnswer(value);

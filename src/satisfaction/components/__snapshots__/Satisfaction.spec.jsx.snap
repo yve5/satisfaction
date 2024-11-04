@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Satisfaction should match expected snapshot. default 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="d-flex justify-content-between my-2"
+    >
+      <button
+        class="btn btn-light"
+        title="Français"
+        type="button"
+      >
+        fr
+      </button>
+      <button
+        class="btn btn-light"
+        type="button"
+      >
+        Impression
+      </button>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <h1>
+          Calcul du facteur de confiance
+        </h1>
+        <blockquote
+          class="blockquote"
+        >
+          <footer
+            class="blockquote-footer"
+          >
+            Source : Brett Nelson
+          </footer>
+        </blockquote>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-salary"
+          >
+            Votre salaire vous convient-il ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-salary"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-satisfaction"
+          >
+            Aimez-vous réellement faire les tâches de votre poste ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-satisfaction"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-employability"
+          >
+            Exercer ce travail vous rapproche-t-il de vos objectifs professionnels ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-employability"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-sideproject"
+          >
+            Avez-vous du temps pour vos projets personnels ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-sideproject"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-culture"
+          >
+            Vos collègues sont-ils d’accord avec vous ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-culture"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-health"
+          >
+            Votre société se porte-t-elle bien ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-health"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-location"
+          >
+            Aimez-vous votre lieu de travail ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-location"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-teamwork"
+          >
+            Appréciez-vous la qualité du travail d’équipe ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-teamwork"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-prospect"
+          >
+            Vos perspectives d’évolution professionnelles vous convient-elles ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-prospect"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+        <div
+          class="row mb-5 mb-md-3"
+        >
+          <label
+            class="col-9 col-md-7 form-label"
+            for="question-interaction"
+          >
+            L’intéraction avec les personnes en ou hors de l’entreprise vous satisfait-elle ?
+          </label>
+          <div
+            class="col-3 col-md-1 text-right"
+          >
+            0%
+          </div>
+          <div
+            class="col-md-4"
+          >
+            <input
+              class="form-range px-0 w-100"
+              data-testid="s10n-question-range"
+              id="question-interaction"
+              step="1"
+              type="range"
+              value="0"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col-md-7"
+      >
+        <div
+          class="alert alert-danger"
+          role="alert"
+        >
+          Songez à deux fois avant d’accepter le job, ou le quitter sur-le-champ.
+        </div>
+      </div>
+      <div
+        class="col-md-4 offset-md-1"
+      >
+        <div
+          class="alert alert-dark"
+          role="alert"
+        >
+          Facteur de confiance : 0%
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

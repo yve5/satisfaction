@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { I18n, LangSwitch } from 'organe/i18n';
+import { I18n, LangSwitch } from 'organe';
 
 import Question from '../nested/Question';
 import { getFactor, getMessage, print } from '../utils';
@@ -24,7 +24,6 @@ const Satisfaction = ({
 
         <button
           type="button"
-          data-testid="s10n-print"
           className="btn btn-light"
           onClick={() => print(dictionary, data)}
         >

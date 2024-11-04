@@ -17,8 +17,6 @@ const I18N_DICTIONARY = {
   'Does doing this work bring you closer to your career goals?':
     'Does doing this work bring you closer to your career goals?',
   'Is your company doing well?': 'Is your company doing well?',
-  lang: 'en',
-  languageId: 'English',
   Print: 'Print',
   Result: 'Result',
   'Source : Brett Nelson': 'Source : Brett Nelson',

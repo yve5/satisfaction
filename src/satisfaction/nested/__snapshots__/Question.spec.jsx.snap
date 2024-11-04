@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Question should match expected snapshot. default 1`] = `
+<DocumentFragment>
+  <div
+    class="row mb-5 mb-md-3"
+  >
+    <label
+      class="col-9 col-md-7 form-label"
+      for="question-culture"
+    >
+      Avez-vous du temps pour vos projets personnels ?
+    </label>
+    <div
+      class="col-3 col-md-1 text-right"
+    >
+      75%
+    </div>
+    <div
+      class="col-md-4"
+    >
+      <input
+        class="form-range px-0 w-100"
+        data-testid="s10n-question-range"
+        id="question-culture"
+        step="1"
+        type="range"
+        value="75"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
