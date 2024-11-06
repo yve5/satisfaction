@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { I18n, LangSwitch } from 'organe';
+import { I18n, LangSwitch } from 'organe/i18n';
 
 import Question from '../nested/Question';
 import { getFactor, getMessage, print } from '../utils';

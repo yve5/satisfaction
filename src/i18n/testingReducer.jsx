@@ -1,4 +1,4 @@
-import { i18nReducer } from 'organe';
+import { i18nReducer } from 'organe/i18n';
 
 import fr from './fr';
 import en from './en';

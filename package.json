@@ -1,6 +1,6 @@
 {
   "name": "satisfaction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "homepage": "https://yve5.github.io/satisfaction",
   "dependencies": {
@@ -12,7 +12,7 @@
     "date-fns": "3.6.0",
     "jest-canvas-mock": "2.5.2",
     "jspdf": "2.5.2",
-    "organe": "1.0.3",
+    "organe": "1.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-redux": "9.1.2",
@@ -55,6 +55,9 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/{index,reportWebVitals}.{js,jsx}"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^organe/(.*)$": "<rootDir>/node_modules/organe/lib/$1.cjs.js"
+    }
   }
 }
