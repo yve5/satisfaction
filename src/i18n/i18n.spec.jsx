@@ -4,18 +4,17 @@ import configureMockStore from 'redux-mock-store';
 import { thunk } from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
-
-import i18n from '.';
-import en from './en';
-import fr from './fr';
-
 import {
   I18n,
   trimTerms,
   checkMissingTerms,
   checkLocalTermOrder,
   convertLocalCollection,
-} from 'organe/i18n';
+} from 'organe';
+
+import i18n from '.';
+import en from './en';
+import fr from './fr';
 
 describe('Local i18n', () => {
   it('should detect missing terms', () => {
