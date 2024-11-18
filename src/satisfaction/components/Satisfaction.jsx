@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { I18n, LangSwitch } from 'organe/i18n';
+import { I18n, LangSwitch } from 'organe';
+import * as All from 'organe/title';
 
 import Question from '../nested/Question';
 import { getFactor, getMessage, print } from '../utils';
 import { SATISFACTION_QUESTIONS } from '../resources/constants';
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+console.log(All);
 
 const Satisfaction = ({
   root: {

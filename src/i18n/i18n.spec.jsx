@@ -15,7 +15,7 @@ import {
   checkMissingTerms,
   checkLocalTermOrder,
   convertLocalCollection,
-} from 'organe/i18n';
+} from 'organe';
 
 describe('Local i18n', () => {
   it('should detect missing terms', () => {

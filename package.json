@@ -12,7 +12,7 @@
     "date-fns": "3.6.0",
     "jest-canvas-mock": "2.5.2",
     "jspdf": "2.5.2",
-    "organe": "file:../oriole/organe-1.2.0.tgz",
+    "organe": "file:../oriole/organe-1.2.42.tgz",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-redux": "9.1.2",
@@ -57,7 +57,7 @@
       "!src/{index,reportWebVitals}.{js,jsx}"
     ],
     "moduleNameMapper": {
-      "^organe/(.*)$": "<rootDir>/node_modules/organe/lib/$1.cjs.js"
+      "^organe/(.*)$": "<rootDir>/node_modules/organe/$1/index.cjs.js"
     }
   }
 }
