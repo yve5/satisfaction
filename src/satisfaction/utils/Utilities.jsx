@@ -1,3 +1,4 @@
+import { formatDate } from 'lapwing';
 import { jsPDF } from 'jspdf';
 // import { formatDate, tsl } from '../../i18n/resources/Utilities';
 import {
@@ -29,50 +30,44 @@ export const getMessage = (factor) => {
   return SATISFACTION_MESSAGES[0];
 };
 
-export const print = (dictionary, data) => {
+export const print = (dictionary, data, tsl) => {
   const doc = new jsPDF();
   const factor = getFactor(data);
   const { message } = getMessage(factor);
 
-  // doc.setFontSize(24);
-  // doc.text(tsl(dictionary, 'Confidence factor calculation'), 19, 25);
+  doc.setFontSize(24);
+  doc.text(tsl('Confidence factor calculation'), 19, 25);
 
-  // doc.setFontSize(9);
-  // doc.text(tsl(dictionary, 'Source : Brett Nelson'), 20, 31);
+  doc.setFontSize(9);
+  doc.text(tsl('Source : Brett Nelson'), 20, 31);
 
-  // doc.setFontSize(11);
-  // let cursor = 40;
+  doc.setFontSize(11);
+  let cursor = 40;
 
-  // SATISFACTION_QUESTIONS.forEach(({ id, importance, label }) => {
-  //   let processed = doc.splitTextToSize(tsl(dictionary, label), 160);
+  SATISFACTION_QUESTIONS.forEach(({ id, importance, label }) => {
+    let processed = doc.splitTextToSize(tsl(label), 160);
 
-  //   doc.text(processed, 20, cursor);
-  //   cursor += 5;
+    doc.text(processed, 20, cursor);
+    cursor += 5;
 
-  //   doc.text(
-  //     `${tsl(dictionary, 'Result')} : ${Math.round(
-  //       (data[id] / importance) * 100
-  //     )}%`,
-  //     20,
-  //     cursor
-  //   );
-  //   cursor += 10;
-  // });
+    doc.text(
+      `${tsl('Result')} : ${Math.round((data[id] / importance) * 100)}%`,
+      20,
+      cursor
+    );
+    cursor += 10;
+  });
 
-  // doc.setFontSize(14);
-  // doc.text(
-  //   `${tsl(dictionary, 'Confidence factor')} : ${factor}%`,
-  //   20,
-  //   cursor + 10
-  // );
+  doc.setFontSize(14);
+  doc.text(`${tsl('Confidence factor')} : ${factor}%`, 20, cursor + 10);
 
-  // doc.setFontSize(11);
-  // doc.text(tsl(dictionary, message), 20, cursor + 17);
+  doc.setFontSize(11);
+  doc.text(tsl(message), 20, cursor + 17);
 
-  // const today = formatDate(new Date(), 'yyLLdd-HHmm');
+  const today = formatDate(new Date(), 'yyLLdd-HHmm');
 
-  // /* istanbul ignore next */
-  // if (process.env.NODE_ENV !== 'test') {
-  //   doc.save(`Confidence-${today}.pdf`);
-  // }
+  /* istanbul ignore next */
+  if (process.env.NODE_ENV !== 'test') {
+    doc.save(`Confidence-${today}.pdf`);
+  }
 };

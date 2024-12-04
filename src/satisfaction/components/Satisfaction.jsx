@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { I18n, LangSwitch } from 'organe';
+import { I18n, LangSwitch } from 'lapwing';
 
 import Question from '../nested/Question';
 import { getFactor, getMessage, print } from '../utils';
@@ -11,7 +11,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 const Satisfaction = ({
   root: {
     satisfaction: { data },
-    i18n: { dictionary },
+    i18n: { dictionary, tsl },
   },
 }) => {
   const factor = getFactor(data);
@@ -25,7 +25,7 @@ const Satisfaction = ({
         <button
           type="button"
           className="btn btn-light"
-          onClick={() => print(dictionary, data)}
+          onClick={() => print(dictionary, data, tsl)}
         >
           <I18n>Print</I18n>
         </button>

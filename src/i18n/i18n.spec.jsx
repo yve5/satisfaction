@@ -10,7 +10,7 @@ import {
   checkMissingTerms,
   checkLocalTermOrder,
   convertLocalCollection,
-} from 'organe';
+} from 'lapwing';
 
 import i18n from '.';
 import en from './en';

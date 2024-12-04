@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { I18n } from 'organe';
+import { I18n } from 'lapwing';
 
 import * as All from '../actions/All';
 import { SATISFACTION_RANGE_STEP } from '../resources/constants';
